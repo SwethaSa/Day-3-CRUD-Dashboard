@@ -41,9 +41,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   }
 }));
 
-function createData(avatar, name, age, role, city, company) {
-  return ({ avatar, name, age, role, city, company } = createData);
-}
+
 
 export default function CustomizedTables() {
   const [userData, setUserData] = useState([]);

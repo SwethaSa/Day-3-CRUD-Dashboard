@@ -1,10 +1,9 @@
 import { Button, Container } from "@mui/material";
 import { useState } from "react";
-import InputBase from '@mui/material/InputBase';
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import { alpha, styled } from "@mui/material/styles";
+import {  styled } from "@mui/material/styles";
 import { useNavigate, useParams } from "react-router-dom";
 
 
@@ -30,80 +29,9 @@ const CssTextField = styled(TextField)({
   }
 });
 
-const BootstrapInput = styled(InputBase)(({ theme }) => ({
-  "label + &": {
-    marginTop: theme.spacing(3)
-  },
-  "& .MuiInputBase-input": {
-    borderRadius: 4,
-    position: "relative",
-    backgroundColor: theme.palette.mode === "light" ? "#fcfcfb" : "#2b2b2b",
-    border: "1px solid #ced4da",
-    fontSize: 16,
-    width: "auto",
-    padding: "10px 12px",
-    transition: theme.transitions.create([
-      "border-color",
-      "background-color",
-      "box-shadow"
-    ]),
-    fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"'
-    ].join(","),
-    "&:focus": {
-      boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
-      borderColor: theme.palette.primary.main
-    }
-  }
-}));
 
-const RedditTextField = styled((props) => (
-  <TextField InputProps={{ disableUnderline: true }} {...props} />
-))(({ theme }) => ({
-  "& .MuiFilledInput-root": {
-    border: "1px solid #e2e2e1",
-    overflow: "hidden",
-    borderRadius: 4,
-    backgroundColor: theme.palette.mode === "light" ? "#fcfcfb" : "#2b2b2b",
-    transition: theme.transitions.create([
-      "border-color",
-      "background-color",
-      "box-shadow"
-    ]),
-    "&:hover": {
-      backgroundColor: "transparent"
-    },
-    "&.Mui-focused": {
-      backgroundColor: "transparent",
-      boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 2px`,
-      borderColor: theme.palette.primary.main
-    }
-  }
-}));
 
-const ValidationTextField = styled(TextField)({
-  "& input:valid + fieldset": {
-    borderColor: "green",
-    borderWidth: 2
-  },
-  "& input:invalid + fieldset": {
-    borderColor: "red",
-    borderWidth: 2
-  },
-  "& input:valid:focus + fieldset": {
-    borderLeftWidth: 6,
-    padding: "4px !important" 
-  }
-});
+
 let emptyForm = {
  name: "",
     avatar: "",
