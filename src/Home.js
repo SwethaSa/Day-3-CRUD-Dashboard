@@ -18,7 +18,6 @@ import { AppBar, Button } from "@mui/material";
 import {  red, deepOrange } from "@mui/material/colors";
 import VisibilityRoundedIcon from '@mui/icons-material/VisibilityRounded';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
-import { toast, ToastContainer } from "react-toastify";
 import Avatar from '@mui/material/Avatar';
 
 
@@ -49,7 +48,7 @@ function createData(avatar, name, age, role, city, company) {
 export default function CustomizedTables() {
   const [userData, setUserData] = useState([]);
 
-  <ToastContainer/>;
+  
 
   const printUserData = () => {
     fetch("https://63969cb3a68e43e418074793.mockapi.io/userdata")
@@ -75,7 +74,7 @@ export default function CustomizedTables() {
       .then((data) => data.json())
       .then((res) => {
       printUserData()
-      toast.warn('Data is Deleted')});
+     });
   };
  
 
